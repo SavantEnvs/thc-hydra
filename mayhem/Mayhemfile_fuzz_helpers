@@ -1,0 +1,9 @@
+project: savantenvs/thc-hydra
+target: fuzz_helpers
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_helpers/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_helpers
+    libfuzzer: true
+    timeout: 30

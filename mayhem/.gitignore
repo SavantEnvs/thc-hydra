@@ -1,0 +1,3 @@
+out-fuzz/
+out-afl/
+out-normal/

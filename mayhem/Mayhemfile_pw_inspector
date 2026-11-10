@@ -1,0 +1,9 @@
+project: savantenvs/thc-hydra
+target: pw_inspector
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pw_inspector/testsuite
+cmds:
+  - cmd: /mayhem/pw_inspector -m 5 -M 16 -c 2 -l -u -n -p -s -i @@
+    afl: true
+    timeout: 30
